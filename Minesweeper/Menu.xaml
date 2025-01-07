@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Minesweeper.MainPage">
+
+    <ScrollView BackgroundColor="Gray">
+        <VerticalStackLayout MaximumWidthRequest="750">
+            <Image Source="minesweeper_logo.png"/>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+            
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="End" Spacing="20">
+                    <Label Text="Columns" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Slider x:Name="ColumnsSlider" Minimum="10" Maximum="30" MinimumWidthRequest="100" VerticalOptions="Center" ValueChanged="ColumnsSlider_ValueChanged"/>
+                    <Entry x:Name="ColumnsEntry" Keyboard="Numeric"  WidthRequest="150" BackgroundColor="White" VerticalOptions="Center" Placeholder="Amount of Columns" TextChanged="ColumnsEntry_TextChanged"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="End" Spacing="20">
+                    <Label Text="Rows" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Slider x:Name="RowsSlider" Minimum="10" Maximum="30" MinimumWidthRequest="100" VerticalOptions="Center" ValueChanged="RowsSlider_ValueChanged"/>
+                        <Entry x:Name="RowsEntry" Keyboard="Numeric" WidthRequest="150" BackgroundColor="White" VerticalOptions="Center" Placeholder="Amount of rows" TextChanged="RowsEntry_TextChanged"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="End" Spacing="20">
+                    <Label Text="Bombs" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Slider x:Name="BombsSlider" Minimum="10" Maximum="250" MinimumWidthRequest="100" VerticalOptions="Center" ValueChanged="BombsSlider_ValueChanged"/>
+                        <Entry x:Name="BombsEntry" Keyboard="Numeric" WidthRequest="150" BackgroundColor="White" VerticalOptions="Center" Placeholder="Amount of Bombs" TextChanged="BombsEntry_TextChanged"/>
+                </HorizontalStackLayout>
+            
+            </VerticalStackLayout>
+        </Grid>
+            
+        <Button x:Name="PlayButton" Text="Start Game" MinimumWidthRequest="200" MaximumWidthRequest="500" Margin="20, 20, 20, 20" BackgroundColor="Green" Clicked="PlayButton_Clicked"/>
+
+
+        </VerticalStackLayout>
+            
+            
+        
+        
+    </ScrollView>
+
+</ContentPage>
